@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    name: spark-beta-master
+  name: spark-beta-master
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: spark-beta-master
+    spec:
+      containers:
+      - name : spark-master
+        image: buildtesting/spark
+        imagePullPolicy: "IfNotPresent"
+        name: spark-beta-master
+        ports:
+        - containerPort: 7077
+          protocol: TCP
+        command:
+         - "/bin/bash"
+         - "-c"
+         - "--"
+        args :
+         - './start-master.sh ; sleep infinity'

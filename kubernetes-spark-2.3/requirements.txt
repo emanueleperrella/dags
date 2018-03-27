@@ -1,0 +1,9 @@
+pyarrow
+kafka-python
+avro-python3
+pandas
+numpy
+scipy
+Cython
+tensorflow
+keras
