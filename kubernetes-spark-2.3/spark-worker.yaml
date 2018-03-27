@@ -12,7 +12,7 @@ spec:
         name: spark-beta-worker
     spec:
       containers:
-      - image: buildtesting/spark
+      - image: buildtesting/spark-jenkins
         imagePullPolicy : "IfNotPresent"
         name: spark-beta-worker
         ports:
